@@ -51,6 +51,11 @@ h3{font-size:15px;font-weight:500;color:var(--sub);margin:36px 0 14px;letter-spa
 .more{display:inline-block;margin-top:28px;color:var(--accent);font-weight:700;font-size:17px;text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:2px;transition:opacity .2s}
 .more:hover{opacity:.7}
 .tel{display:block;font-size:clamp(30px,6vw,52px);font-weight:900;color:var(--accent);text-decoration:none;margin:20px 0 8px}
+.scroll-hint{display:flex;flex-direction:column;align-items:center;gap:6px;margin:44px auto 0;max-width:100%;text-align:center;word-break:keep-all;color:var(--text);text-decoration:none;font-size:15px;font-weight:500}
+.scroll-hint b{color:var(--accent);font-weight:700}
+.scroll-hint .arrow{width:38px;height:38px;border:1px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:18px;animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+@media(prefers-reduced-motion:reduce){.scroll-hint .arrow{animation:none}}
 footer{border-top:1px solid var(--line);padding:32px 0;color:var(--sub);font-size:13px;text-align:center}
 @media(max-width:720px){
 section{padding:64px 0}.hero{padding:88px 0 64px}
@@ -67,9 +72,10 @@ section{padding:64px 0}.hero{padding:88px 0 64px}
   <p>올겨울, 운동을 시작할 특별한 기회!<br>수험생부터 중·고등학생, 가족 회원 그리고 꾸준한 운동을 계획하는 성인 회원까지!<br>4가지 겨울 특별 혜택을 만나보세요.</p>
   <p style="margin-top:12px">시설과 수업의 퀄리티는 높이고, 가격 부담은 낮췄습니다.</p>
   <a class="btn" href="https://map.naver.com/p/entry/place/2000541530?placePath=%252Fhome%253Fentry%253Dplt&amp;searchType=place&amp;lng=127.0590112&amp;lat=35.8380511&amp;c=15.00,0,0,0,dh" target="_blank" rel="noopener">상담 · 등록 문의</a>
+  <a class="scroll-hint" href="#events"><span>👇 아래로 내리면 <b>4가지 이벤트 가격·혜택</b>이 이어집니다</span><span class="arrow" aria-hidden="true">↓</span></a>
 </div></header>
 
-<section><div class="wrap">
+<section id="events"><div class="wrap">
   <div class="eyebrow">EVENT 01</div>
   <h2>수험생 · 중고등학생 특별 할인</h2>
   <p class="lead">겨울방학 동안 건강한 습관과 탄탄한 체력을 만들어 보세요!</p>
